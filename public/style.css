@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Staatliches", cursive;
+}
+.card-title {
+  font-family: "MuseoModerno", cursive;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #111 !important;
+}
+.card {
+  height: 80px;
+}
+.optionElement {
+  font-weight: bold;
+  font-size: 24px;
+}
+.active {
+  background-color: #2586ff;
+  color: white;
+  border-radius: 6px;
+}
+
+.optionElement:hover {
+  background-color: #ff1f69;
+  border-radius: 6px;
+}
+/* .optionElement:active{
+    background-color: blue;
+    color: white;
+} */
+.optionElement {
+  margin: 0px;
+  padding: 10px;
+}
+h2 {
+  position: relative;
+  font-family: "MuseoModerno", cursive;
+  color: #fff;
+  font-size: 30px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  background-color: #efc01b !important;
+  color: #fff !important;
+  width: 100px;
+  height: 50px;
+}
+.btn:focus {
+  background-color: #d501fb !important;
+}
+.btn:hover {
+  background-color: #0aff7d !important;
+}
+
+@media only screen and (max-width: 320px) {
+  .end {
+    padding: 15px;
+  }
+  table tr td {
+    font-size: 15px;
+    padding: 5px;
+  }
+}

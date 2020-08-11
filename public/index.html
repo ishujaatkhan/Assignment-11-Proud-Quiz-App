@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proud Quiz App</title>
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="style.css">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&family=Staatliches&display=swap"
+    rel="stylesheet">
+    <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- BOOTSTRAP JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</head>
+
+<body onload="showQuestion(0)">
+
+  <section>
+
+    <img src="images/1.png" data-speed="-5" class="layer">
+    <img src="images/2.png" data-speed="5" class="layer">
+    <img src="images/3.png" data-speed="2" class="layer">
+    <img src="images/4.png" data-speed="6" class="layer">
+    <img src="images/5.png" data-speed="8" class="layer">
+    <img src="images/6.png" data-speed="-2" class="layer">
+    <img src="images/7.png" data-speed="4" class="layer">
+    <img src="images/8.png" data-speed="-9" class="layer">
+    <img src="images/9.png" data-speed="6" class="layer">
+    <img src="images/10.png" data-speed="-7" class="layer">
+    <img src="images/11.png" data-speed="-5" class="layer">
+    <img src="images/12.png" data-speed="5" class="layer">
+
+    <div style="padding-top: 130px;" class="container">
+      <div style="color: white; position: relative; font-weight: bold;" id="Header" class="d-inline-block">Score: <span
+          id="score">0</span></div>
+      <h1 id="qustionElement" style="text-align: center; color: white; padding-top: 20px; position: relative;">Questions
+      </h1>
+
+      <div style="padding-top: 30px;">
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="col mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title optionElement" onclick="putActiveClass(this)">Option 1</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+
+              <div class="card-body">
+                <h5 class="card-title optionElement" onclick="putActiveClass(this)">Option 2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+
+              <div class="card-body">
+                <h5 class="card-title optionElement" onclick="putActiveClass(this)">Option 3</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+
+              <div class="card-body">
+                <h5 class="card-title optionElement" onclick="putActiveClass(this)">Option 4</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="padding-left: 46%;">>
+      <button style="position: absolute;  " type="button" class="btn btn-primary" id="nextBtn"
+        onclick="nextQuestion()">NEXT</button>
+    </div>
+  </section>
+  <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e) {
+      this.querySelectorAll('.layer').forEach(layer => {
+        const speed = layer.getAttribute('data-speed')
+
+        const x = (window.innerWidth - e.pageX * speed) / 100
+        const y = (window.innerHeight - e.pageY * speed) / 100
+
+        layer.style.transform = `translateX(${x}px) translateX(${y}px)`
+      })
+    }
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
